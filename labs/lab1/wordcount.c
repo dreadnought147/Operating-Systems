@@ -10,14 +10,15 @@ int main(int argc, char *argv[]) {
         printf("Error enter a vlaid number of inputs \n");
         return;
    }
-   strcpy(input_buf,argv[1]);
+   strcpy(input_buf,argv[1]); //copeies the argv1 at input buf
    int count =0;
   // printf("you inputed: %s\n", input_buf);
-   char * temp = strtok(input_buf, " ");
+   char * temp = strtok(input_buf, " ");// take verything until you meet " " ,
+   // all taken is = temp
    while(temp!=NULL){
     //printf("you inputed: %s\n", temp);
     count=count+1;
-    temp = strtok(NULL, " ");
+    temp = strtok(NULL, " "); //
    }
    printf("%d \n", count);
 
